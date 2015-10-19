@@ -1,4 +1,4 @@
-package com.example.jacobi.wihsildroid;
+package com.wihsil.jacobi.wihsildroid;
 
 import android.app.Activity;
 import android.content.Intent;
