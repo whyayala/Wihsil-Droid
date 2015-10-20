@@ -58,8 +58,12 @@ public class MainActivity extends Activity {
     private class MyWebViewClient extends WebViewClient {
         @Override
         public boolean shouldOverrideUrlLoading(WebView view, String url) {
-            if (Uri.parse(url).getHost().equals("www.wihsil.com")) {
-                // This is my web site, so do not override; let my WebView load the page
+            if (Uri.parse(url).getHost().equals("www.wihsil.com") ||
+                    Uri.parse(url).getHost().equals("accounts.spotify.com") ||
+                    Uri.parse(url).getHost().equals("www.spotify.com") ||
+                    Uri.parse(url).getHost().equals("www.facebook.com") ||
+                    Uri.parse(url).getHost().equals("m.facebook.com")) {
+                // Do not override; let my WebView load the page
                 return false;
             }
             // Otherwise, the link is not for a page on my site, so launch another Activity that handles URLs
